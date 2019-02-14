@@ -38,7 +38,7 @@ function get_all_posts( $data, $post, $context ) {
         'title'     => $data->data['title']['rendered'],
         'content'   => $data->data['content']['rendered'],
         'excerpt'   => $data->data['excerpt']['rendered'],
-        'category'  => get_the_category_by_ID( $data->data['categories'][0] ),
+        'category'  => get_the_category_by_ID( $data->data['categories'][0] ), //Category endpoint returns directly the name of the post category
         'link'      => $data->data['link'],
 
 
