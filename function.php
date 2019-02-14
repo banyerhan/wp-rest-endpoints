@@ -48,6 +48,19 @@ add_filter( 'rest_prepare_post', 'get_all_posts', 10, 3 );
 //---------------------------------------------
 
 //it is easy to take features image.. becaz it is default. one of custom field.
+function features_image() {
+//Add featured image
+register_rest_field( 
+    'post', 
+    'my_features', 
+    array(
+        'get_callback'    => 'get_image_src',
+        'update_callback' => null,
+        'schema'          => null,
+         )
+    );
+}
+add_action( 'rest_api_init', 'features_image' );
 function get_image_src( $object, $field_name, $request ) {
   $feat_img_array = wp_get_attachment_image_src(
     $object['featured_media'], 
