@@ -1,2 +1,6 @@
-# wp-rest-endpoints
-It is normal endpoint especially wordpress
+RSEST API
+==========
+
+### by Nightfury
+
+REST is Learning Playground ( with some more items endpoints or shared ponts ) 
