@@ -2,7 +2,7 @@
 //GET call back for custom REST Advanced
 function register_categories_names_field() {
 
-    register_rest_field( 'posts',
+    register_rest_field( 'post',
         'categories_names',
         array(
             'get_callback'    => 'req_get_categories_names',
